@@ -21,6 +21,12 @@ There are no static ffmpeg builds for FreeBSD currently available.
 The module will try to use the system-wide installation.
 
 Install it by running "pkg install ffmpeg" or via ports.
+`)
+    if (platform === 'openbsd') return resolve(`
+There are no static ffmpeg builds for OpenBSD currently available.
+The module will try to use the system-wide installation.
+
+Install it by running "pkg_add ffmpeg" or via ports.
 `) 
     const dir = `bin/${os}/${arch}`
     const bin = `${dir}/ffmpeg${os === 'win32' ? '.exe' : ''}`
